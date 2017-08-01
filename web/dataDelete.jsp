@@ -13,7 +13,8 @@
         String UserId = request.getParameter("userID");
         String sql = "DELETE FROM members " + " WHERE id = '" + UserId + "' ";
         s.execute(sql);
-        out.println("Data deleted successfully!");
+        String message = "Data deleted successfully!";
+        request.getSession().setAttribute("message", message);
         response.sendRedirect("success.jsp");
     } catch (Exception e) {
         out.println(e.getMessage());

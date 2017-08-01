@@ -27,7 +27,7 @@
                             <div class="form-group">
                                 <label for="inputPassword3" class="col-sm-3 control-label">Last Name</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="inputPassword3" name="lname" placeholder="Password" required="">
+                                    <input type="text" class="form-control" id="inputPassword3" name="lname" placeholder="Last Name" required="">
                                 </div>
                             </div>
 
@@ -41,14 +41,14 @@
                             <div class="form-group">
                                 <label for="inputPassword3" class="col-sm-3 control-label">User Name</label>
                                 <div class="col-sm-9">
-                                    <input type="email" class="form-control" id="inputPassword3" name="uname" placeholder="User Name" required="">
+                                    <input type="text" class="form-control" id="inputPassword3" name="uname" placeholder="User Name" required="">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control" id="inputPassword3" name="uname" placeholder="Password" required="">
+                                    <input type="password" class="form-control" id="inputPassword3" name="password" placeholder="Password" required="">
                                 </div>
                             </div>
 

@@ -43,6 +43,12 @@
 
                 </div>
                 <div class="panel-body">
+
+                    <div class="alert alert-success">
+                        <strong>${message}</strong>
+                    </div>
+                    <c:remove var="message" scope="session" />
+
                     <%
                         if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
                     %>
