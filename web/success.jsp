@@ -44,10 +44,12 @@
                 </div>
                 <div class="panel-body">
 
-                    <div class="alert alert-success">
-                        <strong>${message}</strong>
-                    </div>
-                    <c:remove var="message" scope="session" />
+                    <c:if test="${not empty message}">
+                        <div class="alert alert-success">
+                            <strong><c:out value="${message}"/></strong>
+                        </div>
+                        <c:set var="message" value="" scope="session"/>
+                    </c:if>
 
                     <%
                         if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {

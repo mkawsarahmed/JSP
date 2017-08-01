@@ -17,9 +17,13 @@
         Statement st = connection.createStatement();
         int i = st.executeUpdate("INSERT INTO members(first_name, last_name, email, uname, pass, regdate) VALUES ('" + first_name + "','" + last_name + "','" + email + "','" + username + "','" + pass + "', CURDATE())");
         if(i > 0) {
-            response.sendRedirect("welcome.jsp");
-        } else {
+            String message = "Registration is Successful!";
+            request.getSession().setAttribute("message", message);
             response.sendRedirect("index.jsp");
+        } else {
+            String message = "Failed to registration!";
+            request.getSession().setAttribute("message_error", message);
+            response.sendRedirect("reg.jsp");
         }
         /*if(!connection.isClosed())
             out.println("Successfully connected to " + "MySQL server using TCP/IP...");*/

@@ -5,7 +5,9 @@
   Time: 4:45 AM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
   <head>
     <title>Hello</title>
@@ -21,6 +23,14 @@
 
                       </div>
                       <div class="panel-body">
+
+                          <c:if test="${not empty message}">
+                              <div class="alert alert-success">
+                                  <strong><c:out value="${message}"/></strong>
+                              </div>
+                              <c:set var="message" value="" scope="session"/>
+                          </c:if>
+
                           <form class="form-horizontal" role="form" method="POST" action="login.jsp">
                               <div class="form-group">
                                   <label for="inputEmail3" class="col-sm-3 control-label">User Name</label>

@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +18,13 @@
 
                     </div>
                     <div class="panel-body">
+                        <c:if test="${not empty message_error}">
+                            <div class="alert alert-warning">
+                                <strong><c:out value="${message_error}"/></strong>
+                            </div>
+                            <c:set var="message_error" value="" scope="session"/>
+                        </c:if>
+
                         <form class="form-horizontal" role="form" method="POST" action="registration.jsp">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label">Firs Name</label>
