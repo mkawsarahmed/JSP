@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+            line-height: 1.428571429;
+            border-radius: 15px;
+        }
+    </style>
 </head>
 <body>
 
@@ -49,7 +60,10 @@
                     <%
                         if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
                     %>
-                        No data found
+                    <div class="panel-body">
+                        <p>No data found</p>
+                    </div>
+
                     <%} else {
                     %>
                         <div class="panel-body">
@@ -64,17 +78,17 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <c:forEach var="user" items="${listUsers.rows}">
-                                    <tr>
-                                        <td><c:out value="${user.first_name} ${user.last_name}" /></td>
-                                        <td><c:out value="${user.email}" /></td>
-                                        <td><c:out value="${user.uname}" /></td>
-                                        <td><c:out value="${user.pass}" /></td>
-                                        <td>
-                                            <a href="#" class="btn btn-circle btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                                        </td>
-                                    </tr>
-                                </c:forEach>
+                                    <c:forEach var="user" items="${listUsers.rows}">
+                                        <tr>
+                                            <td><c:out value="${user.first_name} ${user.last_name}" /></td>
+                                            <td><c:out value="${user.email}" /></td>
+                                            <td><c:out value="${user.uname}" /></td>
+                                            <td><c:out value="${user.pass}" /></td>
+                                            <td>
+                                                <a href="dataDelete.jsp?userID=<c:out value="${user.id}" />" class="btn btn-circle btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                            </td>
+                                        </tr>
+                                    </c:forEach>
 
                                 </tbody>
                             </table>
@@ -82,7 +96,6 @@
                     <%
                         }
                     %>
-
 
             </div>
         </div>
