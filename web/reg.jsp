@@ -25,7 +25,7 @@
                             <c:set var="message_error" value="" scope="session"/>
                         </c:if>
 
-                        <form class="form-horizontal" role="form" method="POST" action="registration.jsp">
+                        <form class="form-horizontal" role="form" method="POST" action="registration.jsp" autocomplete="off">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label">Firs Name</label>
                                 <div class="col-sm-9">

@@ -94,6 +94,8 @@
                                             <td><c:out value="${user.pass}" /></td>
                                             <td>
                                                 <a href="dataDelete.jsp?userID=<c:out value="${user.id}" />" class="btn btn-circle btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                                |
+                                                <a href="editUser.jsp?userID=<c:out value="${user.id}" />" class="btn btn-circle btn-info"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                             </td>
                                         </tr>
                                     </c:forEach>

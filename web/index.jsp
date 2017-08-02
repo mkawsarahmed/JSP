@@ -31,7 +31,7 @@
                               <c:set var="message" value="" scope="session"/>
                           </c:if>
 
-                          <form class="form-horizontal" role="form" method="POST" action="login.jsp">
+                          <form class="form-horizontal" role="form" method="POST" action="login.jsp" autocomplete="off">
                               <div class="form-group">
                                   <label for="inputEmail3" class="col-sm-3 control-label">User Name</label>
                                   <div class="col-sm-9">
